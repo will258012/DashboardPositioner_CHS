@@ -52,7 +52,7 @@
             this.lblRes.Name = "lblRes";
             this.lblRes.Size = new System.Drawing.Size(98, 13);
             this.lblRes.TabIndex = 0;
-            this.lblRes.Text = "Current resolution : ";
+            this.lblRes.Text = "当前分辨率：";
             // 
             // btnExit
             // 
@@ -60,11 +60,11 @@
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.Lime;
-            this.btnExit.Location = new System.Drawing.Point(219, 111);
+            this.btnExit.Location = new System.Drawing.Point(240, 111);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(44, 23);
             this.btnExit.TabIndex = 1;
-            this.btnExit.Text = "Exit";
+            this.btnExit.Text = "退出";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -93,7 +93,7 @@
             this.lblDashboard.Name = "lblDashboard";
             this.lblDashboard.Size = new System.Drawing.Size(105, 13);
             this.lblDashboard.TabIndex = 0;
-            this.lblDashboard.Text = "Dashboard location :";
+            this.lblDashboard.Text = "仪表盘位置：";
             // 
             // btnCopy
             // 
@@ -105,7 +105,7 @@
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.Size = new System.Drawing.Size(108, 23);
             this.btnCopy.TabIndex = 1;
-            this.btnCopy.Text = "Copy to clipboard";
+            this.btnCopy.Text = "复制至剪贴板";
             this.btnCopy.UseVisualStyleBackColor = true;
             this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
             // 
@@ -118,14 +118,14 @@
             this.lblHelp.Name = "lblHelp";
             this.lblHelp.Size = new System.Drawing.Size(195, 13);
             this.lblHelp.TabIndex = 0;
-            this.lblHelp.Text = "Move this around to the desired position";
+            this.lblHelp.Text = "将其移动到所需位置";
             // 
             // nupWidth
             // 
             this.nupWidth.BackColor = System.Drawing.Color.Gray;
             this.nupWidth.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nupWidth.DecimalPlaces = 3;
-            this.nupWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nupWidth.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nupWidth.ForeColor = System.Drawing.Color.Lime;
             this.nupWidth.Increment = new decimal(new int[] {
             1,
@@ -157,9 +157,9 @@
             this.btnSave.ForeColor = System.Drawing.Color.Lime;
             this.btnSave.Location = new System.Drawing.Point(145, 111);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(68, 23);
+            this.btnSave.Size = new System.Drawing.Size(90, 23);
             this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "Save to .ini";
+            this.btnSave.Text = "保存至配置文件";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -172,7 +172,7 @@
             this.lblWidthText.Name = "lblWidthText";
             this.lblWidthText.Size = new System.Drawing.Size(44, 13);
             this.lblWidthText.TabIndex = 0;
-            this.lblWidthText.Text = "Width : ";
+            this.lblWidthText.Text = "宽度：";
             // 
             // lblHelp1
             // 
@@ -183,7 +183,7 @@
             this.lblHelp1.Name = "lblHelp1";
             this.lblHelp1.Size = new System.Drawing.Size(139, 13);
             this.lblHelp1.TabIndex = 0;
-            this.lblHelp1.Text = "Adjust the gauge width here";
+            this.lblHelp1.Text = "在此调整宽度";
             // 
             // panel1
             // 
@@ -216,7 +216,7 @@
             this.Name = "mainForm";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dashboard Position for Realistic Fuel Mod";
+            this.Text = "Realistic Fuel Mod 仪表盘位置调整器";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.mainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nupWidth)).EndInit();

@@ -20,7 +20,7 @@ namespace DashboardPositioner
         {
             InitializeComponent();
             this.Icon = new System.Drawing.Icon(Assembly.GetExecutingAssembly().GetManifestResourceStream("DashboardPositioner.GTAIV.ico"));
-            this.lblRes.Text = String.Format("Current resolution : {0}x{1}", this.Width, this.Height);
+            this.lblRes.Text = String.Format("当前分辨率：{0}x{1}", this.Width, this.Height);
             _offSet = Point.Empty;
         }
 
@@ -31,7 +31,7 @@ namespace DashboardPositioner
 
         private void mainForm_Load(object sender, EventArgs e)
         {
-            this.lblRes.Text = String.Format("Current resolution :\n{0}x{1}", this.Width, this.Height);
+            this.lblRes.Text = String.Format("当前分辨率：\n{0}x{1}", this.Width, this.Height);
             this.pnlDashboard_LocationChanged(this, e);
             
             w = .11f;
@@ -44,7 +44,7 @@ namespace DashboardPositioner
         {
             x = (pnlDashboard.Location.X * 100.0f) / this.Width;
             y = (pnlDashboard.Location.Y * 100.0f) / this.Height;
-            this.lblDashboard.Text = String.Format("Dashboard location :\nx={0}\ny={1}", x / 100.0f, y / 100.0f);
+            this.lblDashboard.Text = String.Format("仪表盘位置：\nx={0}\ny={1}", x / 100.0f, y / 100.0f);
         }
 
         private void pnlDashboard_MouseDown(object sender, MouseEventArgs e)
@@ -78,7 +78,7 @@ namespace DashboardPositioner
 
             Clipboard.SetText(String.Format("X={0}\nY={1}\nW={2}", x / 100.0f, y / 100.0f, w).Replace(',', '.'));
 
-            MessageBox.Show(String.Format("X={0}\nY={1}\nW={2}", x / 100.0f, y / 100.0f, w).Replace(',', '.') + "\n\nCopied to clipboard. Press CTRL + V, to paste it.", "Position copied");
+            MessageBox.Show(String.Format("X={0}\nY={1}\nW={2}", x / 100.0f, y / 100.0f, w).Replace(',', '.') + "\n\n仪表盘位置已复制至剪贴板。按下 Ctrl + V 以粘贴。", "已复制！");
         }
 
         private void pnlDashboard_Paint(object sender, PaintEventArgs e)
@@ -116,7 +116,7 @@ namespace DashboardPositioner
                 dialog.Filter = "FuelScript.ini | FuelScript.ini";
                 dialog.CheckFileExists = true;
                 dialog.InitialDirectory = "C:\\";
-                dialog.Title = "Please indicate where your FuelScript.ini file is.";
+                dialog.Title = "请选择“FuelScript.ini”文件的位置。";
                 if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     SaveToFile(dialog.FileName);
             }
@@ -160,11 +160,11 @@ namespace DashboardPositioner
                     sw.WriteLine(l);
                 sw.Close();
 
-                MessageBox.Show("Settings file updated.");
+                MessageBox.Show("配置文件已更新。");
             }
             catch (Exception crap)
             {
-                MessageBox.Show("Failed to update file.\n" + crap.Message);
+                MessageBox.Show("更新配置文件失败：\n" + crap.Message);
             }
         }
     }
